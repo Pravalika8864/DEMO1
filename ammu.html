@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Simple Java Script Program </title>
+
+</head>
+
+<body>
+
+<pid="output">0</p>
+
+<button id = "increment-button">Increment</button>
+
+<script>
+
+const output=document.getElementById("output");
+
+const incrementButton-document.getElemetById("increment-button"); 
+let count = 0; incrementButton.addEventListener("click", function() { 
+count += 1 output.innerHTML=count;
+
+});
+
+</script>
+
+</body>
+
+</html>
+Import org.openqa.selenium. WebDriver,
+
+Import org.openqa.selenium.chrome. ChromeDriver;
+
+Import org.junit.After;
+
+Import org.junit.Before;
+
+Import org.junit. Test;
+
+Public class Main {
+
+Private WebDriver driver,
+
+@Before
+
+Public void setUp() {
+
+System.setProperty("webdriver.chrome.driver","path/to/chromedriver"); driver-new ChromeDriver(); }
+
+@Test
+
+Public void testIncrementButton()
+
+{
+
+driver.get(file:///path/to/program.html);
+
+driver.findElement(By.id("increment-button")).click();
+
+String result-driver.findElement(By.id("output")).getText();
+
+assert result.equals("1");
+
+}
+@After
+
+Public void tear Down()
+
+{driver.quit();
+
+}
+
+}
